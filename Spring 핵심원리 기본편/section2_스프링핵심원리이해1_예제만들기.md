@@ -25,8 +25,6 @@
 - [⚠️ 주문과 할인 도메인 실행과 테스트](#️주문과-할인-도메인-실행과-테스트)
 
 
----
-
 ## ✂️ 프로젝트 생성
 
 ### 준비물
@@ -95,8 +93,6 @@ War (Web Application Archive)
 
 <br>
 
----
-
 ## 🪜 비즈니스 요구사항과 설계
 
 ### 회원
@@ -119,8 +115,6 @@ War (Web Application Archive)
 결정하기 어려운 부분때문에 개발을 미룰 수 없으므로 객체 지향 설계에 따라 인터페이스 만들고 구현체를 언제든지 갈아끼울 수 있도록 설계한다
 
 <br>
-
----
 
 ## 🙎 회원 도메인 설계
 
@@ -149,8 +143,6 @@ War (Web Application Archive)
 동적, Runtime 때 진짜 참조하고 있는 객체 표시
 
 <br>
-
----
 
 ## 🛠 회원 도메인 개발
 
@@ -257,8 +249,6 @@ ConcurrentHashMap은 map의 일부에만 lock 사용
 </h3>
 <br>
 
----
-
 ## ⚠️ 회원 도메인 실행과 테스트
 
 MemberApp
@@ -351,8 +341,6 @@ public static AbstractAssert<SELF, T> assertThat(T actual)
 
 <br>
 
----
-
 ## 🪄 주문과 할인 도메인 설계
 
 ### 주문 도메인 협력, 역할, 책임
@@ -394,13 +382,9 @@ OrderServiceImpl이 MemberRepository, DiscountPolicy 사용
 
 <br>
 
----
-
 ## 🛠 주문과 할인 도메인 개발
 
 ### discount
-
-<br>
 
 DiscountPolicy
 
@@ -437,8 +421,6 @@ public class FixDiscountPolicy implements DiscountPolicy {
 <br>
 
 ### order
-
-<br>
 
 Order
 
@@ -516,6 +498,8 @@ public interface OrderService {
 }
 ```
 
+<br>
+
 OrderServiceImpl ← OrderService 구현체
 
 ```java
@@ -535,8 +519,6 @@ public class OrderServiceImpl implements OrderService {
 ```
 
 <br>
-
----
 
 ## ⚠️ 주문과 할인 도메인 실행과 테스트
 
