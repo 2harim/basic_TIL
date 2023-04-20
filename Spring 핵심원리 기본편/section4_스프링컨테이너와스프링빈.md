@@ -36,7 +36,7 @@ ApplicationContext applicationContext = new AnnotationConfigApplicationContext(A
 
 ### 스프링 컨테이너 생성 과정
 
-![Untitled](/img/spring_container_simple.png)
+![Untitled](/img/basic/section4/spring_container_simple.png)
 
 - `new AnnotationConfigApplicationContext(AppConfig.class)` 통해 스프링 컨테이너 생성
 - 구성 정보 지정 필요 - `AppConfig` 로 구성 정보 지정
@@ -45,7 +45,7 @@ ApplicationContext applicationContext = new AnnotationConfigApplicationContext(A
 
 ### 스프링 빈 등록
 
-![Untitled](/img/reg_spring_bean.png)
+![Untitled](/img/basic/section4/reg_spring_bean.png)
 
 - 설정 정보에서 `@Bean` 이 붙어 있는 메서드를 호출하여 **메서드 이름을 빈 이름**으로 하고 반환 객체를 빈 객체로 등록
 - **빈 이름**을 직접 부여할 수도 있음 → 같은 이름을 부여하면 다른 빈 무시되거나 기존 빈을 덮어버리거나 설정에 따라 오류 발생할 수 있으므로 **항상 다른 이름을 부여해야 함**
@@ -54,13 +54,13 @@ ApplicationContext applicationContext = new AnnotationConfigApplicationContext(A
 
 ### 스프링 빈 의존관계 설정 - 준비
 
-![Untitled](/img/prepare_di.png)
+![Untitled](/img/basic/section4/prepare_di.png)
 
 <br>
 
 ### 스프링 빈 의존관계 설정 - 완료
 
-![Untitled](/img/done_di.png)
+![Untitled](/img/basic/section4/done_di.png)
 
 - 설정 정보를 참고하여 의존관계 주입 (DI)
 - 동적인 인스턴스 의존 관계 모두 연결
@@ -294,7 +294,7 @@ public class ApplicationContextExtendsTest {
 
 ## 🏭 BeanFactory와 ApplicationContext
 
-![Untitled](/img/beanfactory_ac.png)
+![Untitled](/img/basic/section4/beanfactory_ac.png)
 
 <br>
 
@@ -329,7 +329,7 @@ public class ApplicationContextExtendsTest {
 
 - 자바 코드, XML, Groovy, ..
 
-![Untitled](/img/various_config.png)
+![Untitled](/img/basic/section4/various_config.png)
 
 <br>
 
@@ -373,13 +373,13 @@ public class ApplicationContextExtendsTest {
 
 스프링 컨테이너는 이 메타정보를 기반으로 스프링 빈을 생성
 
-![Untitled](/img/beandefinition.png)
+![Untitled](/img/basic/section4/beandefinition.png)
 
 추상화에만 의존하도록 설계
 
 <br>
 
-![Untitled](/img/beandefinition_detail.png)
+![Untitled](/img/basic/section4/beandefinition_detail.png)
 
 `AnnotationBeanDefinitionReader` 를 사용해서 `AppConfig` 를 읽어 `BeanDefinition` 생성
 

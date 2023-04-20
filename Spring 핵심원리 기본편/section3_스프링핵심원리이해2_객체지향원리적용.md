@@ -156,11 +156,11 @@ OCP, DIP .. 객체지향 설계 원칙 준수 ? X
 
 실제 의존 관계 (DIP 위반)
 
-![Untitled](/img/dip_x.png)
+![Untitled](/img/basic/section3/dip_x.png)
 
 정책 변경하면 (OCP 위반)
 
-![Untitled](/img/ocp_x.png)
+![Untitled](/img/basic/section3/ocp_x.png)
 
 <br>
 
@@ -168,7 +168,7 @@ OCP, DIP .. 객체지향 설계 원칙 준수 ? X
 
 추상(인터페이스)에만 의존하도록 변경
 
-![Untitled](/img/solve.png)
+![Untitled](/img/basic/section3/solve.png)
 
 OrderServiceImpl 코드 변경
 
@@ -259,7 +259,7 @@ public class MemberServiceImpl implements MemberService {
 
 의존관계에 대한 고민은 외부에 맡기고 실행에만 집중 ⇒ 관심사 분리!
 
-![클래스다이어그램](/img/appconfig_cld.png)
+![클래스다이어그램](/img/basic/section3/appconfig_cld.png)
 
 클래스다이어그램
 
@@ -350,7 +350,7 @@ public class AppConfig {
 
 정액 할인 정책 → 정률 할인 정책 변경
 
-![Untitled](/img/use_config.png)
+![Untitled](/img/basic/section3/use_config.png)
 
 `AppConfig` 등장으로 애플리케이션 → **사용 영역 / 객체 생성 및 구성 영역**으로 분리
 
@@ -483,7 +483,7 @@ ex) JUnit - @Test 통해 자신만의 라이프사이클 속에서 개발자가 
 
 
 클래스 다이어그램
-![Untitled](/img/cld.png)
+![Untitled](/img/basic/section3/cld.png)
 
 **동적인 객체 인스턴스 의존 관계**
 
@@ -495,7 +495,7 @@ ex) JUnit - @Test 통해 자신만의 라이프사이클 속에서 개발자가 
 ```
 
 객체 다이어그램
-![Untitled](/img/od.png)
+![Untitled](/img/basic/section3/od.png)
 
 <br>
 

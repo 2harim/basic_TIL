@@ -145,7 +145,7 @@
 
 **역할**과 **구현**으로 세상 구분
 
-![Untitled](./../img/polymorphism.png)
+![Untitled](/img/basic/section1/polymorphism.png)
 
 자동차 **인터페이스**에 맞게 구현을 했기 때문에 자동차를 바꾼다고 운전면허를 바꿀 필요 없음
 운전자는 역할에 대해서만 의존하고 있음
