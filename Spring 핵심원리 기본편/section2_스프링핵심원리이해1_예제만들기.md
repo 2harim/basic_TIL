@@ -120,7 +120,7 @@ War (Web Application Archive)
 
 ### 회원 도메인 협력 관계
 
-![Untitled](/img/member_domain.png)
+![Untitled](/img/basic/section2/member_domain.png)
 
 회원 데이터에 접근하는 계층 분리 → 인터페이스를 통해 자체 DB 구축과 외부 시스템 연동 미확정 상황에 대응
 
@@ -128,7 +128,7 @@ War (Web Application Archive)
 
 ### 회원 클래스 다이어그램
 
-![Untitled](/img/member_cld.png)
+![Untitled](/img/basic/section2/member_cld.png)
 
 정적
 
@@ -136,7 +136,7 @@ War (Web Application Archive)
 
 ### 회원 객체 다이어그램
 
-![회원 서비스 : MemoryServiceImpl](/img/member_od.png)
+![회원 서비스 : MemoryServiceImpl](/img/basic/section2/member_od.png)
 
 회원 서비스 : MemoryServiceImpl
 
@@ -237,7 +237,7 @@ ConcurrentHashMap은 map의 일부에만 lock 사용
 
 각각의 Bucket 별로 동기화 진행하기 때문에 다른 Bucket에 속한 경우 별도 lock 없이 운용
 
-![Untitled](/img/concurrentHashMap.png)
+![Untitled](/img/basic/section2/concurrentHashMap.png)
 
 - `put` Bucket에 Node가 존재하는 경우만 synchronized 이용해 thread 제어
 - `get` synchronized 이용 X, 가장 최신 value return
@@ -345,7 +345,7 @@ public static AbstractAssert<SELF, T> assertThat(T actual)
 
 ### 주문 도메인 협력, 역할, 책임
 
-![Untitled](/img/order_domain.png)
+![Untitled](/img/basic/section2/order_domain.png)
 
 - 클라이언트는 주문 생성 요청
 - 주문 서비스는 할인을 위해 회원 저장소에서 회원 조회
@@ -356,11 +356,11 @@ public static AbstractAssert<SELF, T> assertThat(T actual)
 
 역할과 구현 분리 → 회원 저장소, 할인 정책 유연하게 변경 가능
 
-![Untitled](/img/order_role.png)
+![Untitled](/img/basic/section2/order_role.png)
 
 ### 주문 도메인 클래스 다이어그램
 
-![Untitled](/img/order_cld.png)
+![Untitled](/img/basic/section2/order_cld.png)
 
 OrderServiceImpl이 MemberRepository, DiscountPolicy 사용
 
@@ -368,13 +368,13 @@ OrderServiceImpl이 MemberRepository, DiscountPolicy 사용
 
 ### 주문 도메인 객체 다이어그램
 
-![Untitled](/img/order_od1.png)
+![Untitled](/img/basic/section2/order_od1.png)
 
 메모리에서 회원 조회, 정액 할인 정책 적용
 
 <br>
 
-![Untitled](/img/order_od2.png)
+![Untitled](/img/basic/section2/order_od2.png)
 
 회원을 실제 DB에서 조회, 정률 할인 정책 적용으로 변경 → 주문 서비스는 변경 필요 X
 
