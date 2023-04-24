@@ -16,9 +16,17 @@ public class JpaMain {
         tx.begin();
 
         try {
-            Member findMember = em.find(Member.class, 1L);
-            findMember.setName("HelloJPA");
+            //비영속
+            Member member = new Member();
+            member.setId(101L);
+            member.setName("HelloJPA");
 
+            //영속
+            em.persist(member);
+            Member member1 = em.find(Member.class, 101L);
+
+            System.out.println("member1.getId() = " + member1.getId());
+            System.out.println("member1.getName() = " + member1.getName());
             tx.commit();
         } catch (Exception e) {
             tx.rollback();
