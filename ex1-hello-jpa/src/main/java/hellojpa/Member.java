@@ -5,8 +5,12 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.TableGenerator;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -14,18 +18,20 @@ import javax.persistence.TemporalType;
 public class Member {
 
     @Id
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private String id;
+
     @Column(name = "name")
     private String username;
-    private Integer age;
-    @Enumerated(EnumType.STRING)
-    private RoleType roleType;
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date createdDate;
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date lastModifiedDate;
-    @Lob
-    private String description;
 
-    public Member() {}
+    public Member() {
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
 }
