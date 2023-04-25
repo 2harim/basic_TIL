@@ -8,7 +8,9 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
+import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.TableGenerator;
 import javax.persistence.Temporal;
@@ -25,8 +27,12 @@ public class Member {
     @Column(name = "USERNAME")
     private String username;
 
-    @Column(name = "TEAM_ID")
-    private Long teamId;
+//    @Column(name = "TEAM_ID")
+//    private Long teamId;
+
+    @ManyToOne
+    @JoinColumn(name = "TEAM_ID")
+    private Team team;
 
     public Long getId() {
         return id;
@@ -44,11 +50,19 @@ public class Member {
         this.username = username;
     }
 
-    public Long getTeamId() {
-        return teamId;
+//    public Long getTeamId() {
+//        return teamId;
+//    }
+//
+//    public void setTeamId(Long teamId) {
+//        this.teamId = teamId;
+//    }
+
+    public Team getTeam() {
+        return team;
     }
 
-    public void setTeamId(Long teamId) {
-        this.teamId = teamId;
+    public void setTeam(Team team) {
+        this.team = team;
     }
 }
