@@ -16,10 +16,20 @@ public class JpaMain {
         tx.begin();
 
         try {
-            Member member = new Member();
-            member.setUsername("C");
 
+            Team team = new Team();
+            team.setName("TeamA");
+            em.persist(team);
+
+            Member member = new Member();
+            member.setUsername("member1");
+            member.setTeamId(team.getId());
             em.persist(member);
+
+            Member findMember = em.find(Member.class, member.getId());
+
+            Long teamId = findMember.getTeamId();
+            Team findTeam = em.find(Team.class, teamId);
 
             tx.commit();
         } catch (Exception e) {
@@ -27,7 +37,6 @@ public class JpaMain {
         } finally {
             em.close();
         }
-
         emf.close();
     }
 }
