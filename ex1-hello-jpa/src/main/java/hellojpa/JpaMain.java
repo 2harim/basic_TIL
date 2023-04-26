@@ -6,6 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
 import org.h2.command.ddl.CreateFunctionAlias;
 
 public class JpaMain {
@@ -19,22 +20,18 @@ public class JpaMain {
         tx.begin();
 
         try {
+            Team team = new Team();
+            team.setName("teamA");
+            em.persist(team);
 
-            Member member = new Member();
-            member.setUsername("hello");
-
-            em.persist(member);
+            Member member1 = new Member();
+            member1.setUsername("member1");
+            member1.setTeam(team);
+            em.persist(member1);
 
             em.flush();
             em.clear();
-
-            Member reference = em.getReference(Member.class, member.getId());
-//            Member findMember = em.find(Member.class, member.getId());
-            Member findMember = em.getReference(Member.class, member.getId());
-            System.out.println("findMember.class = " + findMember.getClass());
-
-            System.out.println("findMember.name = " + findMember.getUsername());
-            System.out.println("findMember.id = " + findMember.getId());
+            List<Member> members = em.createQuery("select m from Member m", Member.class).getResultList();
 
 
             tx.commit();

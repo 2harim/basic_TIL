@@ -8,6 +8,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -34,7 +35,7 @@ public class Member extends BaseEntity {
     @Column(name = "USERNAME")
     private String username;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "TEAM_ID")
     private Team team;
 
@@ -61,8 +62,7 @@ public class Member extends BaseEntity {
         return team;
     }
 
-//    public void setTeam(Team team) {
-//        this.team = team;
-//        team.getMembers().add(this);
-//    }
+    public void setTeam(Team team) {
+        this.team = team;
+    }
 }
