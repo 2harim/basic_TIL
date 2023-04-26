@@ -1,7 +1,16 @@
 package hellojpa;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Objects;
+import java.util.Set;
+import javax.persistence.CollectionTable;
+import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Embeddable;
+import javax.persistence.Embedded;
+import javax.persistence.JoinColumn;
 
 @Embeddable
 public class Address {
@@ -9,6 +18,8 @@ public class Address {
     private String city;
     private String street;
     private String zipcode;
+
+
 
     public Address() {
 
