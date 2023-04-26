@@ -33,9 +33,6 @@ public class Member {
     @Column(name = "USERNAME")
     private String username;
 
-//    @Column(name = "TEAM_ID")
-//    private Long teamId;
-
     @OneToOne
     @JoinColumn(name = "LOCKER_ID")
     private Locker locker;
@@ -43,9 +40,6 @@ public class Member {
     @ManyToOne
     @JoinColumn(name = "TEAM_ID")
     private Team team;
-
-    @OneToMany(mappedBy = "member")
-    private List<MemberProduct> memberProducts = new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -63,20 +57,12 @@ public class Member {
         this.username = username;
     }
 
-//    public Long getTeamId() {
-//        return teamId;
-//    }
-//
-//    public void setTeamId(Long teamId) {
-//        this.teamId = teamId;
-//    }
-
     public Team getTeam() {
         return team;
     }
 
-    public void setTeam(Team team) {
-        this.team = team;
-        team.getMembers().add(this);
-    }
+//    public void setTeam(Team team) {
+//        this.team = team;
+//        team.getMembers().add(this);
+//    }
 }
