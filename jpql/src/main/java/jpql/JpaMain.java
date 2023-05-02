@@ -35,17 +35,13 @@ public class JpaMain {
             em.flush();
             em.clear();
 
-//            String query = "select m from Member m inner join m.team t";
-//            String query = "select m from Member m, Team t where m.username = t.name";
-            String query = "select m from Member m left join m.team t on t.name = 'teamA'";
+            String query = "select coalesce(m.username, '이름 없는 회원') from Member m";
 
-            List<Member> result = em.createQuery(query, Member.class)
-                .getResultList();
-
-            System.out.println("result.size = " + result.size());
-            for (Member member1 : result) {
-                System.out.println("member1 = " + member1);
+            List<String> result = em.createQuery(query, String.class).getResultList();
+            for (String s : result) {
+                System.out.println("s = " + s);
             }
+
             tx.commit();
 
         } catch (Exception e) {

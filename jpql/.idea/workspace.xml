@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fc39939-809c-4cd1-98bd-d6854289d5af" name="Changes" comment="[JPA-basic] jpql - paging">
+    <list default="true" id="5fc39939-809c-4cd1-98bd-d6854289d5af" name="Changes" comment="[JPA-basic] jpql -">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jpql/JpaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpql/JpaMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpql/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpql/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpql/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpql/Team.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +60,8 @@
       <option name="presentableId" value="Default" />
       <updated>1682496997534</updated>
       <workItem from="1682496998678" duration="2093000" />
-      <workItem from="1682994630680" duration="1598000" />
+      <workItem from="1682994630680" duration="2808000" />
+      <workItem from="1683006680044" duration="289000" />
     </task>
     <task id="LOCAL-00001" summary="[JPA-basic] jpql - projection">
       <created>1682994926789</created>
@@ -78,7 +77,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682995689269</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="[JPA-basic] jpql - join">
+      <created>1682996317009</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682996317009</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,6 +93,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[JPA-basic] jpql - projection" />
     <MESSAGE value="[JPA-basic] jpql - paging" />
-    <option name="LAST_COMMIT_MESSAGE" value="[JPA-basic] jpql - paging" />
+    <MESSAGE value="[JPA-basic] jpql - join" />
+    <option name="LAST_COMMIT_MESSAGE" value="[JPA-basic] jpql - join" />
   </component>
 </project>
