@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fc39939-809c-4cd1-98bd-d6854289d5af" name="Changes" comment="[JPA-basic] use entity object - primary key">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpql/JpaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpql/JpaMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpql/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpql/Member.java" afterDir="false" />
-    </list>
+    <list default="true" id="5fc39939-809c-4cd1-98bd-d6854289d5af" name="Changes" comment="[JPA-basic] bulk operation" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683034654750</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="[JPA-basic] bulk operation">
+      <created>1683036137897</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683036137897</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,6 +114,7 @@
     <MESSAGE value="[JPA-basic] jpql - join" />
     <MESSAGE value="[JPA-basic] jpql" />
     <MESSAGE value="[JPA-basic] use entity object - primary key" />
-    <option name="LAST_COMMIT_MESSAGE" value="[JPA-basic] use entity object - primary key" />
+    <MESSAGE value="[JPA-basic] bulk operation" />
+    <option name="LAST_COMMIT_MESSAGE" value="[JPA-basic] bulk operation" />
   </component>
 </project>
