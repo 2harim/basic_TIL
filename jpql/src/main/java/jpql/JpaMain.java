@@ -46,10 +46,10 @@ public class JpaMain {
             em.flush();
             em.clear();
 
-            String query = "select m from Member m where m= :member";
+            int resultCount = em.createQuery("update Member m set m.age=20").executeUpdate();
+            System.out.println("resultCount = " + resultCount);
 
-            Member findMember  = em.createQuery(query, Member.class).setParameter("member", member1).getSingleResult();
-            System.out.println("findMember = " + findMember);
+
 
             tx.commit();
 
