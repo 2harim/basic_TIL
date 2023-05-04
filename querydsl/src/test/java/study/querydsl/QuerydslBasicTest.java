@@ -705,6 +705,5 @@ public class QuerydslBasicTest {
         for (String s : result) {
             System.out.println("s = " + s);
         }
-
     }
 }
