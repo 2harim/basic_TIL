@@ -6,6 +6,7 @@ import static study.querydsl.entity.QTeam.team;
 
 import com.querydsl.core.QueryResults;
 import com.querydsl.core.types.dsl.BooleanExpression;
+import com.querydsl.jpa.JPQLQuery;
 import com.querydsl.jpa.impl.JPAQuery;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import java.util.List;
@@ -13,13 +14,14 @@ import javax.persistence.EntityManager;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.support.QuerydslRepositorySupport;
 import org.springframework.data.support.PageableExecutionUtils;
 import study.querydsl.dto.MemberSearchCondition;
 import study.querydsl.dto.MemberTeamDto;
 import study.querydsl.dto.QMemberTeamDto;
 import study.querydsl.entity.Member;
 
-public class MemberRepositoryImpl implements MemberRepositoryCustom{
+public class MemberRepositoryImpl implements MemberRepositoryCustom {
 
     private final JPAQueryFactory queryFactory;
 
@@ -27,8 +29,10 @@ public class MemberRepositoryImpl implements MemberRepositoryCustom{
         this.queryFactory = new JPAQueryFactory(em);
     }
 
+
     @Override
     public List<MemberTeamDto> search(MemberSearchCondition condition) {
+
         return queryFactory
             .select(new QMemberTeamDto(
                 member.id.as("memberId"),
@@ -50,6 +54,7 @@ public class MemberRepositoryImpl implements MemberRepositoryCustom{
 
     @Override
     public Page<MemberTeamDto> searchPageSimple(MemberSearchCondition condition, Pageable pageable) {
+
         QueryResults<MemberTeamDto> results = queryFactory
             .select(new QMemberTeamDto(
                 member.id.as("memberId"),
